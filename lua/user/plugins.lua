@@ -1,9 +1,17 @@
 lvim.plugins = {
   "rebelot/kanagawa.nvim",
+  {
+    "saecki/crates.nvim",
+    ft = { "rust", "toml" },
+    config = function(_, opts)
+      local crates = require("crates")
+      crates.setup(opts)
+      crates.show()
+    end
+  },
   "mrjones2014/nvim-ts-rainbow",
   "ahmedkhalf/project.nvim",
   "tpope/vim-surround",
-  "ggandor/leap.nvim",
   {
     "phaazon/hop.nvim",
     event = "BufRead",
