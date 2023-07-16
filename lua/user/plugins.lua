@@ -10,7 +10,6 @@ lvim.plugins = {
     end
   },
   "mrjones2014/nvim-ts-rainbow",
-  "ahmedkhalf/project.nvim",
   "tpope/vim-surround",
   {
     "phaazon/hop.nvim",
@@ -18,10 +17,6 @@ lvim.plugins = {
     config = function()
       require("hop").setup()
     end,
-  },
-  {
-    "folke/persistence.nvim",
-    event = "BufReadPre", -- this will only start session saving when an actual file was opened
   },
   {
     "folke/trouble.nvim",
