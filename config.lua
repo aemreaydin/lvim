@@ -6,3 +6,4 @@ vim.opt.relativenumber = true
 lvim.colorscheme = "kanagawa"
 lvim.format_on_save.enabled = true
 lvim.builtin.lualine.style = "default"
+lvim.builtin.treesitter.rainbow.enable = true
