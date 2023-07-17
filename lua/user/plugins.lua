@@ -1,5 +1,7 @@
 lvim.plugins = {
   "rebelot/kanagawa.nvim",
+  'stevearc/dressing.nvim',
+  "nvim-telescope/telescope-ui-select.nvim",
   {
     "saecki/crates.nvim",
     ft = { "rust", "toml" },
@@ -9,7 +11,6 @@ lvim.plugins = {
       crates.show()
     end
   },
-  "mrjones2014/nvim-ts-rainbow",
   "tpope/vim-surround",
   {
     "phaazon/hop.nvim",

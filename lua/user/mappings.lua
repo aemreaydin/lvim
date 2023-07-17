@@ -1,7 +1,7 @@
 lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
-
--- Buffer Kill
-lvim.builtin.which_key.mappings["bc"] = lvim.builtin.which_key.mappings["c"]
+lvim.builtin.which_key.mappings["|"] = { ":vsplit<CR>", "Vertical Split" }
+lvim.builtin.which_key.mappings["-"] = { ":split<CR>", "Horizontal Split" }
+lvim.builtin.which_key.mappings["x"] = lvim.builtin.which_key.mappings["c"]
 -- Trouble
 lvim.builtin.which_key.mappings["t"] = {
   name = "Trouble",
@@ -23,9 +23,28 @@ lvim.builtin.which_key.mappings["h"] = {
 }
 -- Crates
 lvim.builtin.which_key.mappings["c"] = {
+  name = "Crates",
   r = { "<cmd>lua require'crates'.reload()<cr>", "Reload crates" },
   u = { "<cmd>lua require'crates'.upgrade_crate()<cr>", "Upgrade crate on the cursor" },
   a = { "<cmd>lua require'crates'.upgrade_all_crates()<cr>", "Upgrade all crates" },
   d = { "<cmd>lua require'crates'.open_documentation()<cr>", "Open crate documentation" },
   f = { "<cmd>lua require'crates'.show_features_popup()<cr>", "Show features popup" },
 }
+-- Telescope
+lvim.builtin.which_key.mappings["f"] = {
+  name = "Find",
+  b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+  C = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+  f = { "<cmd>Telescope find_files<cr>", "Find files" },
+  t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+  s = { "<cmd>Telescope grep_string<cr>", "Find String" },
+  h = { "<cmd>Telescope help_tags<cr>", "Help" },
+  H = { "<cmd>Telescope highlights<cr>", "Highlights" },
+  l = { "<cmd>Telescope resume<cr>", "Last Search" },
+  M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+  r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+  R = { "<cmd>Telescope registers<cr>", "Registers" },
+  k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+  c = { "<cmd>Telescope commands<cr>", "Commands" },
+}
+lvim.builtin.which_key.mappings["s"] = {}
